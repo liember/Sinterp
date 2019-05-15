@@ -1,0 +1,13 @@
+var hola
+var lola
+read lola
+hola = lola + 2222
+write lola
+write hola
+lola = lola - hola
+write lola
+lola = lola * 2
+write lola
+lola = lola / 2
+write lola
+write hola
