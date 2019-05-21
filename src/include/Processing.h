@@ -2,4 +2,5 @@
 
 #include "structs.h"
 
-int ExecuteComands(Parent *CmdList);
+int ExecuteComandsList(Memory *memory, Operator *CmdList);
+Operator *ExecuteComand(Memory *memory, Operator *NeCmd);

@@ -1,0 +1,24 @@
+var hola float
+var lola int
+var lol
+var ivt
+var ivttt
+lola = 1
+write lola
+while hola < 10
+read lola
+lol = lol + lola
+hola = hola + 1
+while ivt < 3
+write hola
+while ivttt < 3
+ivttt = ivttt + 1
+write ivttt
+done
+ivttt = 0
+ivt = ivt + 1
+done
+ivt = 0
+write hola
+done
+write lol

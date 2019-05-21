@@ -7,11 +7,21 @@
 #include "include/parsing.h"
 #include "include/Processing.h"
 
-int main(void)
+int main(int argc, const char *argv[])
 {
-    //CheckSyntax(ComandsList);
-    Parent *ComandsList = ReadScript("input.txt");
-    //CheckLogic(ComandsList);
-    ExecuteComands(ComandsList);
+    char script[100];
+    if (argc != 2)
+    {
+        printf("Wrong number of arguments\n");
+        return 1;
+    }
+    scpy(script, argv[1]);
+    Operator *ComandsList = ReadScript(script);
+    for (Operator *lol = ComandsList; lol != NULL; lol = lol->next)
+    {
+        printf("%p ne %p par %p\n", lol, lol->next, lol->parent);
+    }
+    Memory *memory = InitMemory();
+    ExecuteComandsList(memory, ComandsList);
     return 0;
 }

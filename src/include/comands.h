@@ -5,7 +5,13 @@
 #include "string.h"
 #include "parsing.h"
 
-void SumComand(Variable *Customer, Memory *memory, Operator *NeCmd);
-void DifComand(Variable *Customer, Memory *memory, Operator *NeCmd);
-void MultipComand(Variable *Customer, Memory *memory, Operator *NeCmd);
-void DivComand(Variable *Customer, Memory *memory, Operator *NeCmd);
+void MatchComand(Variable *Customer, Memory *memory, Operator *NeCmd, char Act);
+
+int ChekCondition(Memory *memory, Operator *NeCmd, char Act);
+
+Operator *SkipCycle(Operator *NeCmd);
+
+Operator *GoToElseOrFi(Operator *NeCmd);
+Operator *SkipElse(Operator *NeCmd);
+
+int ChekIfCondition(Memory *memory, Operator *NeCmd, char Act);

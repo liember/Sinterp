@@ -1,0 +1,17 @@
+var hola float
+var lola int
+var lol
+var ivt int
+var hola
+var food int
+var kok
+lol = 1
+write lol
+ivt = 1.5 + 1
+write ivt
+kok = 1.5 + 1
+write kok
+hola = lol + ivt
+write hola
+food = hola
+write food

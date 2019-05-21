@@ -16,13 +16,6 @@ typedef struct
 
 typedef struct
 {
-    struct Operator *next;
-} Parent;
-
-//---------------
-
-typedef struct
-{
     char *name;
     int type;
     float value;
@@ -46,12 +39,43 @@ typedef struct
     Variable *Second;
 } Fmatch;
 
+typedef struct
+{
+    char Act;
+    Variable *First;
+    Variable *Second;
+} Fwhile;
+
+typedef struct
+{
+} Fdone;
+
+typedef struct
+{
+    char Act;
+    Variable *First;
+    Variable *Second;
+} Fif;
+
+typedef struct
+{
+} Ffi;
+
+typedef struct
+{
+} Felse;
+
 typedef struct Operator
 {
-    Parent *par;
+    struct Operator *parent;
     struct Operator *next;
     FVar *Var;
     FRead *Read;
     FWrite *Write;
     Fmatch *Match;
+    Fdone *Done;
+    Fwhile *While;
+    Fif *If;
+    Ffi *Fi;
+    Felse *Else;
 } Operator;

@@ -64,3 +64,24 @@ char isdigi(char c)
 
     return 0;
 }
+
+void StrDelim(char *str)
+{
+    for (; *str != '\n' && *str != '\0'; str++)
+    {
+        if (*str == ' ')
+        {
+            *str = '\0';
+        }
+    }
+    *str = '\0';
+}
+
+char *MoveToNextDelim(char *str)
+{
+    for (; *str != '\0'; str++)
+    {
+    }
+    str++;
+    return str;
+}

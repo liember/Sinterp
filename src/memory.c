@@ -42,6 +42,7 @@ Variable *CreateNewVariable(Memory *mem, char *name, float value, int type)
     {
         p->name = name;
         p->value = value;
+        p->type = type;
         p->next = mem->next;
         mem->next = p;
         mem->size++;

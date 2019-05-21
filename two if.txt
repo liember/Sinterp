@@ -1,0 +1,18 @@
+var hola int
+var lola int
+var lol
+lola = 2
+hola = 3
+if lola < hola then
+write hola
+else
+write lola
+fi
+lola = 4
+hola = 3
+if lola < hola then
+write hola
+else
+write lola
+fi
+write lol
